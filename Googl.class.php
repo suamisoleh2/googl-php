@@ -3,7 +3,7 @@
 /**
 * This file is part of googl-php
 *
-* https://github.com/sebiw/googl-php
+* https://github.com/sebi/googl-php
 *
 * googl-php is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
