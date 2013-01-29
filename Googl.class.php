@@ -25,6 +25,8 @@ class Googl
 	private $target;
 	private $apiKey;
 	private $ch;
+	
+	private static $buffer = array();
 
 	function __construct($apiKey = null) {
 		# Extended output mode
@@ -48,6 +50,12 @@ class Googl
 	}
 
 	public function shorten($url, $extended = false) {
+		
+		# Check buffer
+		if ( !$extended && !$this->extended && !empty(self::$buffer[$url]) ) {
+			return self::$buffer[$url];
+		}
+		
 		# Payload
 		$data = array( 'longUrl' => $url );
 		$data_string = '{ "longUrl": "'.$url.'" }';
@@ -60,7 +68,9 @@ class Googl
 		if ( $extended || $this->extended) {
 			return json_decode(curl_exec($this->ch));
 		} else {
-			return json_decode(curl_exec($this->ch))->id;
+			$ret = json_decode(curl_exec($this->ch))->id;
+			self::$buffer[$url] = $ret;
+			return $ret;
 		}
 	}
 
