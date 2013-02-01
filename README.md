@@ -1,6 +1,8 @@
 googl-php
 =========
 
+{<img src="https://api.travis-ci.org/sebi/googl-php.png"/>}[http://travis-ci.org/sebi/googl-php]
+
 Introduction
 ------------
 googl-php is a small and simple PHP class intended to use with the Google URL shortening service "Goo.gl" and licensed under the GNU GPL v3.
