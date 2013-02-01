@@ -1,7 +1,7 @@
 googl-php
 =========
 
-{<img src="https://api.travis-ci.org/sebi/googl-php.png"/>}[http://travis-ci.org/sebi/googl-php]
+<a href="http://travis-ci.org/sebi/googl-php"><img src="https://api.travis-ci.org/sebi/googl-php.png"/></a>
 
 Introduction
 ------------
