@@ -33,9 +33,11 @@ unset($googl);
 
 API key
 -------
-You don't need an API key to use the class (=the shortening service). 
+You will need an API key to use the the shortening service.
 
-But as Google writes in their own "Getting Started" guide, it's "highly recommended" to use one. And clicking a button doesn't really hurt, right?
+Learn more at https://developers.google.com/url-shortener/v1/getting_started#auth.
+
+OAuth is not supported by this library. Please use the authentication via application key.
 
 Further info
 ------------
