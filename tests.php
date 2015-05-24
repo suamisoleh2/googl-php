@@ -41,7 +41,10 @@ function println($text) {
 
 require 'Googl.class.php';
 
-$googl = new Googl();
+#
+# IMPORTANT: Please add your API key to make the tests work
+#
+$googl = new Googl('YOUR_API_KEY');
 
 println('#1 - Assert that shortening http://www.google.ch results in an URL');
 assert_url($googl->shorten('http://www.google.ch'));
