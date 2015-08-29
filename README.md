@@ -40,3 +40,10 @@ OAuth is not supported by this library. Please use the authentication via applic
 Further info
 ------------
 For further information about Goo.gl and its API, please visit: https://developers.google.com/url-shortener/.
+
+Tips
+-----
+For development use, add the following CURL option so that it can blindly accept HTTPS connection. If not you'll get blank response following by error at line 71
+```php
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+```
